@@ -1,0 +1,121 @@
+#navigation {
+	margin:0;
+	padding: 0;
+	clear:both;
+	width:100%;
+	height:51px;
+	font-family: helvetica, arial, sans-serif;
+	
+
+	 position: relative;
+ background: #0095BA
+	
+}
+
+
+ul.nav-main,
+ul.nav-main li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+ul.nav-main {
+	position: relative;
+	z-index: 597;
+}
+
+ul.nav-main li:hover > ul {
+	visibility: visible;
+}
+
+
+ul.nav-main li.hover,
+ul.nav-main li:hover {
+	position: relative;
+	z-index: 599;
+	cursor: pointer;
+	/*background: url(images/dropdown-bg-hover.gif) repeat-x left top;*/
+background: #0b2b61;
+ background: -moz-linear-gradient(top, #0b2b61, #1153c0);
+ background: -webkit-gradient(linear, left top, left bottom, from(#0b2b61), to(#1153c0));
+ -moz-border-radius: 4px;
+ -webkit-border-radius: 4px;
+ -moz-box-shadow: 2px 3px 10px #011331;
+ -webkit-box-shadow: 2px 3px 10px #011331;}
+
+
+
+ul.nav-main li {
+	float:left;
+	display:block;
+	height: 51px;
+	color: #999;
+	font: 14px Arial, Helvetica, sans-serif;
+	background: 
+}
+
+ul.nav-main li a {
+	display:block;
+	padding: 16px 16px 0 16px;
+	height: 35px;
+	color: #e3e3e3; /menyu yozuvlarini rangi/
+	font: 14px Terminal, Helvetica, sans-serif;
+	text-decoration:none;
+}
+
+ul.nav-main li a:hover {
+	color:#e3e3e3; /yozuvlarini hoverdagi rangi/}
+
+ul.nav-main *.list {
+	
+	background:
+}
+
+
+
+ul.nav-sub {
+	visibility: hidden;
+	position: absolute;
+	padding:10px;
+	top: 48px;
+	left: 0;
+	z-index: 598;
+	background: #0095BA;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+}
+
+
+ul.nav-sub li {
+	list-style:none;
+	display:block;
+	padding: 0;
+	height: 27px;
+	float: none;
+	width:145px;
+	border-bottom: 1px solid #5a5a5a;
+	background: none;
+}
+
+ul.nav-sub li a {
+	list-style:none;
+	display:block;
+	padding: 6px 5px 6px 5px;
+	height: 15px;
+	float: none;
+	width:145px;
+	background: none;
+	font: 12px Arial, Helvetica, sans-serif;	
+}
+
+ul.nav-main li.current
+{position: relative;
+ background: #0044A7;
+ float: left;
+
+}
+

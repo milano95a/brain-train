@@ -1,0 +1,86 @@
+body {background: #FFFFFF;
+	  font-size:18px; font-family: 'PT Sans', sans-serif; margin:0 auto;  width:940px;
+}
+
+table.main {font-family: 'PT Sans', sans-serif; font-size:16px;}
+
+a:hover {text-decoration:underline;}
+
+a {text-decoration:none; color:#0033FF;}
+
+a:visited {color:#663399;}
+
+h1 {font-size:24px; font-family: 'PT Sans', sans-serif; font-weight:bold; margin-top:15px; color:#FFFFFF; margin-left:10px; text-align:center;}
+
+h2 {font-size:22px; font-family: 'PT Sans', sans-serif; font-weight:bold;}
+
+tr.topnav {font-size:16px; font-family: 'PT Sans', sans-serif; font-weight:bold;}
+
+tr.content {font-size:16px; font-family: 'PT Sans', sans-serif;}
+
+table.content {font-size:16px; font-family: 'PT Sans', sans-serif;}
+
+table.result {font-size:16px; font-family: 'PT Sans', sans-serif; color:royalblue; font-weight:bold}
+
+srchResult iframe { 
+        width: 760px; 
+} 
+
+#colwrap {
+  width:100%;
+}
+
+#col1 {
+  float:left;
+  width:200px;
+  background-color:#329988;
+}
+
+#col2 {
+  float:right;
+  width:100%;
+  margin-left:-210px;
+
+}
+
+#col2n {
+  padding-left:210px;
+}
+
+#left-nav { display: block; text-align:left;}
+#left-nav ul { list-style: none; margin: 0px; padding: 0px; }
+#left-nav ul li { list-style: none; text-align: left;}
+#left-nav ul li a { display: block; text-decoration: none; padding: 3px 10px; color:#fff; }
+#left-nav ul li a:hover { background-color: #ccc; color: #fff; }
+#left-nav ul li a:visited { color: #cc99ff; }
+
+table.top {
+  background-color:#336699;
+  margin: 0 0 0 0;
+  width:100%;
+}
+
+#nextpage {
+  float:right;
+}
+
+.menu {border-bottom: 1px solid #ccc; padding: 2px 2px;color:#ffffff; font-weight:bold; font-size:16px; font-family: 'PT Sans', sans-serif; }
+.sub {margin-left:12px;}
+.sub-menu {border-bottom:0px; margin-left:8px; font-size:10px; padding:0 0 0 0; color:#ffffff; font-weight:bold; font-size:14px; font-family: 'PT Sans', sans-serif; }
+
+#custom-search {
+  position:  absolute;
+  top: 20px;
+  left: 650px;
+}
+
+.top-header {
+  width:100%;
+  background-color:#EEEEEE;
+  font-size:19px; font-family: 'PT Sans', sans-serif;
+  padding-top:5px;
+  padding-bottom:5px;
+  text-align:center;
+}
+
+a.top-header {font-size:19px; font-family: 'PT Sans', sans-serif; color:#FFFFFF; font-weight:bold; text-decoration:none;}

@@ -1,0 +1,20 @@
+
+p{font-family:Calibri;
+font-size:20px;
+color: #0095ba;}
+h1
+{font-family:Calibri;
+font-size:40px;
+color: #0095ba;
+text-align:center;}
+
+.link :hover {color: #1975FF; font-size:30px;}
+	:visited {color:#f7002f;}
+	:link {color: #0095ba;}
+	:active { color:blue;} 
+	
+
+	h
+{font-family:Calibri;
+font-size:35px;
+color: #0095ba;}

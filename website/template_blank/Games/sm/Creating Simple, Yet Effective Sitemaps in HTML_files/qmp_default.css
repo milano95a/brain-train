@@ -1,0 +1,163 @@
+.qmpContainer {
+    width: 298px;
+    background-color:#ffffff;
+    border:1px solid #A5A5A5;
+    -moz-box-shadow: 3px 3px 4px #A5A5A5;
+    -webkit-box-shadow: 3px 3px 4px #A5A5A5;
+    box-shadow: 3px 3px 4px #A5A5A5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#A5A5A5')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#A5A5A5');
+    margin: 0 10px 5px 0;
+}
+
+.qmpContainer  #widget-title {
+    width: 288px;
+    background-color: #ffffff;
+    height: 24px;
+    margin: 0;
+    padding:0 0 4px 10px;
+    line-height: 1.4em;
+    text-decoration: none;
+    border-bottom: 1px dotted #004C80;
+}
+
+.qmpContainer  #widget-title h2{
+    color: #004C80;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    color: #004C80;
+    font-weight: bold;
+}
+
+.qmpContainer .asset-title a{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #004C80;
+    font-weight: bold;
+    line-height: 1.4em;
+    text-decoration: none;
+}
+
+.qmpContainer .asset-title a:hover{
+    text-decoration: underline;
+}
+.qmpContainer div div #assetsListings{
+    margin:0;
+    padding:0;
+
+}
+.qmpContainer div div #assetsListings ul{
+    margin:0;
+    padding:0;
+}
+.qmpContainer div div #assetsListings ul li{
+    margin:0;
+    padding:10px;
+}
+
+
+.cachedWidget .listing .asset .blurb{
+    margin:0;
+}
+
+.thumbs{
+    margin-bottom: 5px;
+}
+
+.qmpContainer div div #assetsListings ul li .asset-logo a img{
+    border:0;
+}
+
+.cmplogo{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: 150px;
+    width: 150px;
+    text-align: center;
+    /*padding-top: 40px;*/
+}
+
+.assetthumb{
+    float: left;
+    -moz-box-shadow: 3px 3px 4px #A5A5A5;
+    -webkit-box-shadow: 3px 3px 4px #A5A5A5;
+    box-shadow: 3px 3px 4px #A5A5A5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#A5A5A5')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#A5A5A5');
+    margin: 3px 10px 5px 0px;
+}
+.asset-blurb{
+    margin-bottom: 15px;
+    margin-top: 5px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    line-height: 1.4em;
+    color:#666666;
+}
+
+.cachedWidget #assetsListings_listing .asset{
+    list-style: none;
+    margin-left: 0;
+}
+
+
+.cachedWidget .listing .asset, #assetsListings_listing_template .listing .asset{
+    padding-bottom:20px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #000;
+}
+.cachedWidget .listing .asset:last-child, #assetsListings_listing_template .listing .asset:last-child {
+    border:0;
+}
+.asset-download
+{
+    width: 100%;
+    text-align: right;
+}
+.asset .asset-download .asset-download-button,.asset-pdf-button,.asset-pdf-button,.asset-article-button,.asset-podcast-button,.asset-software-button,.asset-trial-button,.asset-whitepaper-button,.asset-smartpaper-button{
+    display:block;
+    background: url("/hqb2b/img/qmp/btn_download.png");
+    height: 24px;
+    width: 77px;
+    float:right;
+}
+.asset-download-button a:hover
+{
+    text-decoration: none;
+}
+
+.asset .asset-download .asset-asset-button,.asset--button,.asset-courses-button,.asset-eseminar-button,.asset-eseminarseries-button,.asset-event-button,.asset-ondemand-button,.asset-tool-button,.asset-webcast-button,.asset-webinar-button{
+    display:block;
+    background: url("/hqb2b/img/qmp/btn_register.png");
+    height: 24px;
+    width: 77px;
+    float:right;
+}
+.asset-eseminar-button a:hover
+{
+    text-decoration: none;
+}
+
+.asset .asset-download .asset-demo-button,.asset-video-button{
+    display:block;
+    background: url("/hqb2b/img/qmp/btn_watch.png");
+    height: 24px;
+    width: 77px;
+    float:right;
+}
+.asset-download-button a:hover
+{
+    text-decoration: none;
+}
+.clearfix{
+    clear:both;
+}
+.asset .asset-thumb img {
+    height: 130px !important;
+    width: 100px !important;
+}
+
+.asset .col-left{
+	margin-right: 15px !important;
+}

@@ -1,0 +1,10 @@
+.link 
+	:hover {color: #1975FF; font-size:40px;}
+	:visited {color:#f7002f;}
+	:link {color: #0095ba;}
+	:active { color:blue;} 
+	h 
+{font-family:Calibri;
+font-size:35px;
+color: #0095ba;
+cursor:pointer;}

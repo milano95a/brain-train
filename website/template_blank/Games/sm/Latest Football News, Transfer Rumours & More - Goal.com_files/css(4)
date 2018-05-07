@@ -1,0 +1,16 @@
+/* FILE:/2015.04.14-v1/css/branding/puma/desktop.css */
+/*!
+* Purpose : Contains PUMA styles for desktop
+* Template: /branding/puma/desktop
+*/body.puma .main-content{background-position:top left;background-repeat:no-repeat;background-color:#fff}body.puma .main-content .module-featured-strip{padding-top:61px;margin:0 10px 10px;background:transparent;height:204px}body.puma .main-content>.column{margin-top:10px}body.puma .section-sidebar{margin:0 10px 10px}body.puma .module-featured-strip a{color:#fff}body.puma .module-featured-strip .arrow:before{position:absolute;z-index:3;width:16px;height:24px;background:url('/web/goal/2015.04.14-v1/images/branding/puma/arrows-nav.png') no-repeat;content:' '}body.puma .module-featured-strip .arrow.left:before{background-position:-16px 6px}body.puma .module-featured-strip .arrow.left:hover:before{background-position:-16px -19px}body.puma .module-featured-strip .arrow.left{left:-18px}body.puma .module-featured-strip .arrow{position:absolute;top:115px;z-index:2;width:21px;height:24px;cursor:pointer}body.puma .module-featured-strip .arrow.right{right:-24px}body.puma .module-featured-strip .arrow.right:before{background-position:0 6px}body.puma .module-featured-strip .arrow.right:hover:before{background-position:0 -19px}body.puma .home-sidebar .mpu-300x250{margin-bottom:33px}body.puma .home-sidebar{margin:2px 10px 10px}.lt-ie9 .puma .module-featured-strip .arrow.left:hover:before{background-position:-16px -19px}.lt-ie9 .puma .module-featured-strip .arrow.right:before{background-position:0 6px}.lt-ie9 .puma .module-featured-strip .arrow.right:hover:before{background-position:0 -19px}.lt-ie9 .puma .module-featured-strip .arrow.left:before{background-position:-16px 6px}
+
+
+@media only screen and (max-width: 1020px) {
+/* FILE:/2015.04.14-v1/css/branding/puma/tablet.css */
+/*!
+* Purpose : Contains PUMA styles for tablet
+* Template: /branding/puma/tablet
+*/body.puma{background-image:none}body.puma .module-breaking-news [data-index="7"],body.puma .module-breaking-news [data-index="8"],body.puma .module-breaking-news [data-index="9"],body.puma .module-breaking-news [data-index="10"]{display:none}body.puma .module-sliding-panel .sliding-panels[data-current-panel="news"]{height:665px !important}body.puma .module-sliding-panel .sliding-panels[data-current-panel="matches"]{height:790px !important}
+
+}
+

@@ -1,0 +1,34 @@
+body 
+	{
+		margin:0;
+		padding:0;
+	}
+	
+#wrapper
+{
+	margin: auto;
+	width: 800px;
+height: 1000px;
+outline:1px solid red;
+}
+
+#Header
+	{width:800px;
+	height: 300px;
+	position:relative;
+	border: 1px solid #00F;
+	}
+	
+#Body{
+	width:800px;
+	height:650px;
+	position:relative;
+	border: 1px solid #0F0;
+}
+
+#Footer{
+	width:800px;
+	height:42px;
+	position:relative;
+	border: 1px solid #000;
+}

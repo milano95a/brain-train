@@ -1,0 +1,93 @@
+/* vim: se ts=8:sts=8:sw=8:noet */
+/* application settings.js */
+(function (window, document, undefined) {
+'use strict';
+
+if (typeof (window.console) === undefined) {
+window.console = {
+log : function () {},
+info : function () {},
+warn : function () {},
+error : function () {},
+assert: function () {}
+};
+}
+
+/*
+* Override default alert() method to not allow 3rd party javascript run it on our page
+* We should use _alert() instead of it, if necessary
+*/
+window._alert = window.alert;
+window.alert = function() {
+console.log('alert', arguments);
+};
+
+namespace('Goal.settings');
+
+/**
+* Generic environment related variables/flags such as "isProduction", "loggingEnabled", "page" etc.
+*
+* @type {Object}
+* @namespace Goal.settings
+*/
+Goal.settings.environment = {
+isProduction : true,
+loggingEnabled : false,
+bookmakersIds : [5,13,43,206],
+bookmakers : {"2":"Coral","5":"PaddyPower","13":"Bet365","19":"Betfair","25":"StanJames","31":"BetVictor","43":"WilliamHill","54":"Unibet","71":"Bwin","117":"Betway","130":"Youwin","139":"MyBet","141":"Tipico","142":"TonyBet","200":"188bet","201":"Mansion","202":"BonanzaWin","203":"BetVernons","204":"Senibet","205":"888sport","206":"Sportingbet","207":"Caliente","208":"Ladbrokes","209":"PinnacleSports"},
+page : $('meta[name="page"]').attr('content'),
+edition : 'en',
+isRTL : false,
+countryCodeToEdition : {"IO":"en-gb","GB":"en-gb","PK":"en","AS":"en-us","AG":"en-us","AW":"en-us","BS":"en-us","BB":"en-us","BZ":"en-us","BM":"en-us","KY":"en-us","DM":"en-us","GD":"en-us","GU":"en-us","JM":"en-us","KN":"en-us","LC":"en-us","US":"en-us","UM":"en-us","VI":"en-us","BD":"en-india","BT":"en-india","IN":"en-india","MV":"en-india","NP":"en-india","IE":"en-ie","MY":"en-my","CA":"en-ca","BN":"en-sg","KH":"en-sg","LA":"en-sg","MM":"en-sg","PH":"en-sg","SG":"en-sg","AU":"en-au","CC":"en-au","NZ":"en-au","NG":"en-ng","ES":"es","AD":"es","AR":"es-ar","BO":"es-ar","EC":"es-ar","PY":"es-ar","UY":"es-ar","PE":"es-ar","VA":"it","IT":"it","SM":"it","TH":"th","AT":"de","DE":"de","LI":"de","CH":"de","BJ":"fr","BF":"fr","CM":"fr","CF":"fr","KM":"fr","CG":"fr","CD":"fr","CI":"fr","GQ":"fr","FR":"fr","GF":"fr","PF":"fr","TF":"fr","GA":"fr","GP":"fr","GN":"fr","HT":"fr","LU":"fr","MG":"fr","ML":"fr","MQ":"fr","YT":"fr","MC":"fr","NC":"fr","NE":"fr","RE":"fr","RW":"fr","BL":"fr","MF":"fr","PM":"fr","SN":"fr","TG":"fr","AO":"br","BR":"br","CV":"br","GW":"br","MZ":"br","PT":"br","ST":"br","TL":"br","BE":"nl","BQ":"nl","CW":"nl","NL":"nl","SX":"nl","SR":"nl","TR":"tr","ID":"id-ID","HK":"hk","MO":"hk","TW":"hk","KP":"kr","KR":"kr","JP":"jp","BH":"ar","DJ":"ar","IQ":"ar","JO":"ar","KW":"ar","LB":"ar","LY":"ar","MR":"ar","MA":"ar","OM":"ar","PS":"ar","QA":"ar","SS":"ar","SD":"ar","SY":"ar","TN":"ar","AE":"ar","EH":"ar","YE":"ar","DZ":"ar","TD":"ar","SO":"ar","EG":"ar-eg","SA":"ar-sa","GH":"en-gh","KE":"en-ke","ZA":"en-za","ZW":"en-za","CO":"es-co","VE":"es-co","CL":"es-cl","CR":"es-mx","CU":"es-mx","DO":"es-mx","SV":"es-mx","GT":"es-mx","HN":"es-mx","MX":"es-mx","NI":"es-mx","PA":"es-mx","PR":"es-mx","TZ":"en-tz","BA":"ba","HR":"hr","RS":"rs","SI":"si"},
+desktopHost : 'goal.com',
+mobileHost : 'm.goal.com',
+deviceRedirect : false,
+route : {
+editionHomepage : 'http://www.goal.com/en',
+loginForm : 'https://secure.goal.com/en/account/login/form',
+login : 'https://secure.goal.com/en/account/login',
+logout : 'https://secure.goal.com/en/account/logout',
+incrementViewCount : 'http://viewcount.goal.com/en/module/view-count/increment',
+accountVerified : 'https://secure.goal.com/en/account/verified',
+resetPasswordForm : 'https://secure.goal.com/en/account/reset-password/form?token',
+predictMatch : 'http://www.goal.com/en/module/predict/predict',
+topFlopVote : 'http://www.goal.com/en/module/top-flop/vote',
+betPredictScore : 'http://www.goal.com/en/module/bet/predict-score',
+liveNow: {
+scores : 'http://www.goal.com/en/module/live-now/scores',
+tables : 'http://www.goal.com/en/module/live-now/tables',
+},
+feed: {
+match: {
+scores : 'http://www.goal.com/feed/matches/scores?format=goal',
+matchDays : 'http://www.goal.com/feed/matches/match-days?format=goal',
+matchDetails : 'http://www.goal.com/feed/gsm/match-details?format=goal',
+matchEvents : 'http://www.goal.com/feed/matches/match-events?format=goal',
+statistics : 'http://www.goal.com/feed/matches/statistics',
+detailedStatistics : 'http://www.goal.com/feed/matches/detailed-statistics?format=goal'
+},
+odds: {
+match: 'http://www.goal.com/feed/odds/match?format=goal'
+},
+page: {
+match: 'http://www.goal.com/feed/page/match?format=goal'
+},
+news: {
+galleries : 'http://www.goal.com/feed/news/galleries?format=goal'
+}
+}
+}
+};
+
+/**
+* Stores jQuery events' settings (namespace for events, e.g. 'click tap' -> 'click.goalcom tap.goalcom')
+*
+* @type {Object}
+* @namespace Goal.settings
+*/
+Goal.settings.events = {
+namespace : 'goalcom'
+};
+})(this, this.document);
+/*** application.js ***/
+(function(window,document,undefined){namespace("Goal.application");namespace("Goal.settings.events");namespace("Goal.intervals");Goal.application.bindings=$.safe("Goal:application:bindings",function(){$.bindEventsFor("all",{"body":{"init-closeEdition":Goal.events.closeEdition.init,"init-page":Goal.events.page.init.all,"init-commentsCount":Goal.events.commentsCount.init,"init-refresh":Goal.events.refresh.init,"init-comments":Goal.events.comments.init,"init-shareBar":Goal.events.shareBar.init,"init-poll":Goal.events.poll.init,"init-cookieInfo":Goal.events.cookieInfo.init,"init-branding":Goal.events.branding.init,"scroll-to-anchor":Goal.events.page.scrollToAnchor,"init-deviceRedirect":Goal.events.deviceRedirect.init},".module[data-related-to]:not(:empty)":{"init-relatedModules":Goal.events.relatedModules.init},'.module-sliding-panel > [data-widget="carousel"]':{"init-slidingPanel":Goal.events.slidingPanel.init},'.module-hero-news > [data-widget="carousel"]':{"init-heronews":Goal.events.heronews.init},'.module-featured-strip > [data-widget="carousel"]':{"init-featuredStrip":Goal.events.featuredStrip.init},'.module-featured-list > [data-widget="carousel"]':{"init-featuredStrip":Goal.events.featuredStrip.init},'[data-role="edition-picker-opener"]':{"click":Goal.events.header.toggleLanguagePicker},'[data-role="predict-matches-toggler"]':{"click":Goal.events.predictor.togglePredictListMatches},'[data-role="pitch-toggler"]':{"click":Goal.events.match.lineups.togglePitchView},'.module-predict [data-role="predict-matches-switcher"]':{"click":Goal.events.predictor.switchPredictMatch},".module-predict":{"init-predictor":Goal.events.predictor.init},'[data-role="author-description-toggler"]':{"click":Goal.events.author.toggleAuthorDescription},".module-section-description":{"init-sectionDescription":Goal.events.sectionDescription.init},'.module-predict .btn[data-role="predict"]':{"click.predictor":Goal.events.predictor.predictMatch,"click.omniture":Goal.events.omniture.predictorSubmitted},".module-popular-now":{"init-popularNow":Goal.events.popularNow.init},".module-featured-matches":{"init-featuredMatches":Goal.events.featuredMatches.init},".module-bet-combo":{"init-betCombo":Goal.events.betCombo.init},".module-survey":{"init-survey":Goal.events.surveyPremiereLeauge.init}});$.bindEventsFor("tablet",{"body":{"init-tablet":Goal.events.page.init.tablet,"init-navigation":Goal.events.navigation.init.tablet,"init-layout":Goal.events.layout.init.tablet}});$.bindEventsFor("desktop",{"body":{"init-desktop":Goal.events.page.init.desktop,"init-navigation":Goal.events.navigation.init.desktop,"init-layout":Goal.events.layout.init.desktop,"init-survey":Goal.events.survey.init}});});Goal.application.triggers=$.safe("Goal:application:triggers",function(){Goal.onPages("home",function(){$("body").triggerNamespacedEvent("init-closeEdition");});Goal.onPages("all",function(){$("body").triggerNamespacedEvent("init-page").triggerNamespacedEvent("init-navigation").triggerNamespacedEvent("init-tabs").triggerNamespacedEvent("init-poll").triggerNamespacedEvent("init-refresh").triggerNamespacedEvent("init-commentsCount").triggerNamespacedEvent("init-cookieInfo").triggerNamespacedEvent("init-branding").triggerNamespacedEvent("scroll-to-anchor");$(".module-predict").triggerNamespacedEvent("init-predictor");$(".module[data-related-to]:not(:empty)").triggerNamespacedEvent("init-relatedModules");});Goal.onPages("home",function(){$("body").triggerNamespacedEvent("init-home").triggerNamespacedEvent("init-layout").triggerNamespacedEvent("init-deviceRedirect").triggerNamespacedEvent("init-survey");$('.module-sliding-panel > [data-widget="carousel"]').triggerNamespacedEvent("init-slidingPanel");$('.module-hero-news > [data-widget="carousel"]').triggerNamespacedEvent("init-heronews");$('.module-featured-strip > [data-widget="carousel"]').triggerNamespacedEvent("init-featuredStrip");$(".module-popular-now").triggerNamespacedEvent("init-popularNow");$(".module-featured-matches").triggerNamespacedEvent("init-featuredMatches");$(".module-bet-combo").triggerNamespacedEvent("init-betCombo");});Goal.onPages("article",function(){$("body").triggerNamespacedEvent("init-comments").triggerNamespacedEvent("init-shareBar");$('[data-provider="taboola"]').triggerNamespacedEvent("init-taboola");$(".module-popular-now").triggerNamespacedEvent("init-popularNow");$(".module-section-description").triggerNamespacedEvent("init-sectionDescription");});Goal.onPages("section",function(){$(".module-popular-now").triggerNamespacedEvent("init-popularNow");$("body").triggerNamespacedEvent("init-layout");$('.module-featured-strip > [data-widget="carousel"]').triggerNamespacedEvent("init-featuredStrip");$('.module-featured-list > [data-widget="carousel"]').triggerNamespacedEvent("init-featuredStrip");$('.module-hero-news > [data-widget="carousel"]').triggerNamespacedEvent("init-heronews");$(".module-bet-combo").triggerNamespacedEvent("init-betCombo");});Goal.onPages("team",function(){$('.module-hero-news > [data-widget="carousel"]').triggerNamespacedEvent("init-heronews");});});Goal.application.rebind=$.safe("Goal:application:rebind",function(){Goal.log("Goal:application:rebind called");$("*").unbind(Goal.fmt(".%@",Goal.settings.events.namespace));Goal.application.resetIntervalsAndTimeouts();Goal.application.bindings();Goal.application.triggers();});Goal.application.resetIntervalsAndTimeouts=$.safe("Goal:application:resetIntervalsAndTimeouts",function(){var cleanIntervals=function(intervals){_.each(intervals,function(value){if(_.isNumber(value)){Goal.log(Goal.fmt("Goal:application:resetIntervalsAndTimeouts Clearing Interval or Timeout (index=%@)",value));window.clearTimeout(value);window.clearInterval(value);}else{cleanIntervals(_.values(value));}});};cleanIntervals(Goal.intervals);Goal.log("Goal:application:resetIntervalsAndTimeouts Clearing Intervals and Timeouts finished");});$(function(){$(window).bind("resize",_.debounce(Goal.events.page.resized,300));Goal.log("Goal:application:documentReady:tabs called");$('[data-plugin="tabs"]').tabs();Goal.onPages("home",function(){$(window).bind("orientationchange",Goal.events.page.reload);Goal.events.featuredArticle.init.call($(".module-featured-article"));});$.safe("Goal:application:documentReady",function(){Goal.events.stats.dataProvider.init();Goal.events.login.init();Goal.events.betting.init();Goal.events.floatingbar.init();Goal.events.adtag.init();Goal.events.shareIcons.init();Goal.events.outdatedBrowsers.init();Goal.events.pageNavigation.init.call($(".module-page-navigation"));Goal.events.headerStrip.init();if($(".module-competitions").length){Goal.events.competition.init.call($(".module-competitions"));}if($(".module-livenow").length){Goal.events.liveNow.init.call($(".module-livenow"));}if($(".module-latest-galleries").length){Goal.events.latestGalleries.init.call($(".module-latest-galleries"));}Goal.onPages("article",function(){Goal.events.taboola.init();Goal.events.viewCount.init();Goal.events.kalooga.init();Goal.events.timer.init();Goal.events.rankingModule.init.call($(".module-ranking"));Goal.events.gallery.init();Goal.events.surveyPremiereLeauge.init();});Goal.onPages("section",function(){Goal.events.promoMpu.init();Goal.events.transferTalk.init.call($(".module-transfer-talk"));Goal.events.doneDeals.init();Goal.events.timer.init();Goal.events.featuredArticle.init.call($(".module-featured-article"));Goal.events.rankingModule.init.call($(".module-ranking"));});Goal.onPages("home",function(){Goal.events.transferTalk.init.call($(".module-transfer-talk"));Goal.events.doneDeals.init();});Goal.onPages("all",function(pageName){var smartBannersConfigs={GoalLiveScores:{author:"Goal.com",title:"Goal Live Scores",id:{iOS:"687276446",Android:"com.kokteyl.goal"},price:"FREE",appStoreLanguage:"us",layer:"absolute",icon:"/images/module/live-scores/icon57x57.png",daysHidden:7,daysReminder:10,button:"View",iconGloss:false},Goal:{author:"Goal.com",title:"Goal.com",id:{iOS:"518026818",Android:"com.freerange360.mpp.GOAL"},price:"FREE",appStoreLanguage:"us",layer:"absolute",icon:"/apple-touch-icon-114x114.png",daysHidden:7,daysReminder:10,button:"View",iconGloss:false}};if((/scores|live-scores|fixtures|results|tables|match/ig).test(window.location.href)){pageName="scores";}if(pageName==="home"){Goal.events.smartbanner.init(smartBannersConfigs.Goal,smartBannersConfigs.GoalLiveScores);}else{if(pageName==="scores"){Goal.events.smartbanner.init(smartBannersConfigs.GoalLiveScores);}else{Goal.events.smartbanner.init(smartBannersConfigs.Goal);}}});Goal.onPages("match",function(){Goal.events.match.init();});Goal.onPages("match-list",function(){Goal.events.matchList.init();Goal.events.betCombo.init.call($(".module-bet-combo"));});Goal.onPages("competition-list",function(){Goal.events.competitionList.init();});Goal.onPages("livescores",function(){Goal.events.livescores.init();Goal.events.betCombo.init.call($(".module-bet-combo"));});Goal.onPages("team",function(){Goal.events.nextMatch.init.call($(".module-next-match"));Goal.events.lastMatches.init.call($(".module-last-matches"));});Goal.onPages("ranking",function(){Goal.events.rankingTable.init();});Goal.onPages("tables",function(){Goal.events.tables.init();Goal.events.betCombo.init.call($(".module-bet-combo"));});Goal.events.omniture.init();})();Goal.application.rebind();});window.onload=function(){var goal_loaded=document.createElement("div");goal_loaded.setAttribute("id","goal_loaded");document.body.appendChild(goal_loaded);};})(this,this.document);

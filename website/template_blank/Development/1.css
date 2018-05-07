@@ -1,0 +1,52 @@
+.table
+{background: #0b2b61;
+ background: -moz-linear-gradient(top, #0b2b61, #1153c0);
+ background: -webkit-gradient(linear, left top, left bottom, from(#0b2b61), to(#1153c0));
+ -moz-border-radius: 4px;
+ -webkit-border-radius: 4px;
+ -moz-box-shadow: 2px 3px 10px #011331;
+ -webkit-box-shadow: 2px 3px 10px #011331;
+border:1px solid #0044A7; 
+width:80%;
+margin-left:auto; 
+margin-right:auto;
+margin-top:30px;
+padding:15px;
+}
+h 
+{font-family:Calibri;
+font-size:25px;
+color: #e3e3e3;
+text-align:center;
+padding:5px 15px 0px 15px;}
+p{font-family:Calibri;
+font-size:20px;
+color: #e3e3e3;
+padding:5px 15px 0px 15px;}
+h1
+{font-family:Calibri;
+font-size:30px;
+color: #e3e3e3;
+text-align:center;
+padding:5px 15px 0px 15px;}
+h2
+{font-family:Calibri;
+font-size:25px;
+color: #e3e3e3;
+text-align:left;
+padding:5px 15px 0px 15px;}
+.img 
+{width:250px;
+height:300px;
+-moz-border-radius: 5px;
+ -webkit-border-radius: 20px;
+ -moz-box-shadow: 1px 1px 1px #011331;
+ -webkit-box-shadow: 1px 1px 1px #011331;}
+ .amazon
+ {
+ width:100px;
+height:30px;
+-moz-border-radius: 3px;
+ -webkit-border-radius: 10px;
+ -moz-box-shadow: 5px 5px 5px #011331;
+ -webkit-box-shadow: 5px 5px 5px #011331;}
